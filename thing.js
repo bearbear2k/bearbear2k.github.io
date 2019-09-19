@@ -4,7 +4,7 @@ seedval = Math.random();
 centerx = 0;
 centery = 0;
 // algorithm = prompt('Algorithm:')
-algorithm = 'w'
+algorithm = 'nc'
 numerical = false;
 // numerical = prompt('Numerical?:') == 'y';
 iterations = 0;
