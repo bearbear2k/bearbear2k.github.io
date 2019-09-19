@@ -88,8 +88,6 @@ window.onload = function () {
         centerx += (e.clientX - rect.left - size / 2) / (size / 2) * scale;
         centery += -(e.clientY - rect.top - size / 2) / (size / 2) * scale;
         redraw(centerx, centery, scale /= 2);
-        range.innerHTML = `Range: ${scale}`;
-        center.innerHTML = `Center: ${centerx} ${centery}`;
     }, false);
     recompile();
 }
@@ -311,7 +309,10 @@ void main()
     redraw(centerx, centery, scale);
 }
 
-function redraw() {
+function redraw(centerx, centery, scale) {
+    
+        range.innerHTML = `Range: ${scale}`;
+        center.innerHTML = `Center: ${centerx} ${centery}`;
     ctx.clearColor(0.0, 0.0, 0.0, 1.0);
     ctx.clear(ctx.COLOR_BUFFER_BIT | ctx.DEPTH_BUFFER_BIT);
 
