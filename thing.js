@@ -100,7 +100,7 @@ varying vec2 num;
 
 void main(void) {
     gl_Position = position;
-    num = gl_Position.xy * ${scale} + vec2(${centerx}, ${centery});
+    num = gl_Position.xy * float(${scale}) + vec2(${centerx}, ${centery});
 }
 `);
     const fragment = compile(ctx, ctx.FRAGMENT_SHADER, `
